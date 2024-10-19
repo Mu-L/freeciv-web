@@ -1959,3 +1959,8 @@ function handle_team_name_info(packet)
 {
   /* TODO: implement */
 }
+
+function handle_popup_image(packet)
+{
+  /* TODO: implement */
+}

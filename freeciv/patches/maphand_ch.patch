@@ -1,7 +1,7 @@
 diff -Nurd freeciv/common/networking/packets.def freeciv/common/networking/packets.def
---- freeciv/common/networking/packets.def	2024-05-18 00:46:38.885812349 +0300
-+++ freeciv/common/networking/packets.def	2024-05-18 00:46:49.709919374 +0300
-@@ -2468,3 +2468,13 @@
+--- freeciv/common/networking/packets.def	2024-10-19 03:56:30.894145694 +0300
++++ freeciv/common/networking/packets.def	2024-10-19 03:56:46.886308153 +0300
+@@ -2449,3 +2449,13 @@
    TILE dest;
    UINT32 turns;
  end
@@ -16,8 +16,8 @@ diff -Nurd freeciv/common/networking/packets.def freeciv/common/networking/packe
 +  STRING message[MAX_LEN_MSG];
 +end
 diff -Nurd freeciv/server/maphand.c freeciv/server/maphand.c
---- freeciv/server/maphand.c	2024-05-18 00:46:39.253815986 +0300
-+++ freeciv/server/maphand.c	2024-05-18 00:46:49.709919374 +0300
+--- freeciv/server/maphand.c	2024-10-19 03:56:31.434151179 +0300
++++ freeciv/server/maphand.c	2024-10-19 03:58:42.987487980 +0300
 @@ -16,6 +16,7 @@
  #endif
  
@@ -34,7 +34,7 @@ diff -Nurd freeciv/server/maphand.c freeciv/server/maphand.c
  #include "events.h"
  #include "game.h"
  #include "map.h"
-@@ -2729,3 +2731,380 @@
+@@ -2744,3 +2746,380 @@
      }
    }
  }
@@ -374,11 +374,11 @@ diff -Nurd freeciv/server/maphand.c freeciv/server/maphand.c
 +      if (unit_owner(punit) == pplayer) {
 +        /* Show bribe cost for own units. */
 +        astr_add_line(str, _("Bribe cost: %d"),
-+                      unit_bribe_cost(punit, pplayer));
++                      unit_bribe_cost(punit, pplayer, nullptr));
 +      } else {
 +        /* We can only give an (lower) boundary for units of other players. */
 +        astr_add_line(str, _("Estimated bribe cost: > %d"),
-+                      unit_bribe_cost(punit, pplayer));
++                      unit_bribe_cost(punit, pplayer, nullptr));
 +      }
 +
 +      if ((nullptr == pplayer || owner == pplayer)
@@ -416,8 +416,8 @@ diff -Nurd freeciv/server/maphand.c freeciv/server/maphand.c
 +  astr_free(&str);
 +}
 diff -Nurd freeciv/server/maphand.h freeciv/server/maphand.h
---- freeciv/server/maphand.h	2024-05-18 00:46:39.253815986 +0300
-+++ freeciv/server/maphand.h	2024-05-18 00:46:49.709919374 +0300
+--- freeciv/server/maphand.h	2024-10-19 03:56:31.434151179 +0300
++++ freeciv/server/maphand.h	2024-10-19 03:56:46.894308234 +0300
 @@ -147,4 +147,7 @@
  void tile_change_side_effects(struct tile *ptile, bool refresh_city)
    fc__attribute((nonnull (1)));
