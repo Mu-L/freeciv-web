@@ -6,9 +6,6 @@
 # https://osdn.net/projects/freeciv/ticket/?????
 # https://redmine.freeciv.org/issues/???
 #
-# 0048-Handle-CoastStrict-units-correctly-on-city-removal.patch
-#   Fix to unit placement after city destruction
-#   RM #525
 # 0061-savegame-Correct-loading-last-turn-change-time.patch
 #   Savegame loading fix
 #   RM #545
@@ -39,6 +36,9 @@
 # 0030-Tex-Initialize-map-topology.patch
 #   Tex AI map topology fix
 #   RM #663
+# 0046-Fix-combat-veterancy-chance.patch
+#   Fix veterancy gaining
+#   RM #983
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -62,7 +62,6 @@ declare -a GIT_PATCHLIST=(
 )
 
 declare -a PATCHLIST=(
-  "backports/0048-Handle-CoastStrict-units-correctly-on-city-removal"
   "backports/0061-savegame-Correct-loading-last-turn-change-time"
   "backports/0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-"
   "backports/0089-Meson-Make-fc_client_common-to-depend-on-verhdr"
@@ -73,6 +72,7 @@ declare -a PATCHLIST=(
   "backports/0068-AI-Remove-shared-vision-from-pending-war-target-once"
   "backports/0038-map_init_topology-Operate-on-any-map"
   "backports/0030-Tex-Initialize-map-topology"
+  "backports/0046-Fix-combat-veterancy-chance"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
