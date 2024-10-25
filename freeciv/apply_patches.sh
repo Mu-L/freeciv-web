@@ -6,9 +6,6 @@
 # https://osdn.net/projects/freeciv/ticket/?????
 # https://redmine.freeciv.org/issues/???
 #
-# 0061-savegame-Correct-loading-last-turn-change-time.patch
-#   Savegame loading fix
-#   RM #545
 # 0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-.patch
 #   Savegame loading fix
 #   RM #577
@@ -62,7 +59,6 @@ declare -a GIT_PATCHLIST=(
 )
 
 declare -a PATCHLIST=(
-  "backports/0061-savegame-Correct-loading-last-turn-change-time"
   "backports/0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-"
   "backports/0089-Meson-Make-fc_client_common-to-depend-on-verhdr"
   "backports/0080-savegame-Save-ACTION_NONE-as-1"
