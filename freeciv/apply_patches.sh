@@ -6,9 +6,6 @@
 # https://osdn.net/projects/freeciv/ticket/?????
 # https://redmine.freeciv.org/issues/???
 #
-# 0080-savegame-Save-ACTION_NONE-as-1.patch
-#   Savegame loading fix
-#   RM #598
 # 0074-Meson-Make-fc_server-to-depend-on-verhdr.patch
 #   Build fix
 #   RM #682
@@ -47,7 +44,6 @@ declare -a GIT_PATCHLIST=(
 )
 
 declare -a PATCHLIST=(
-  "backports/0080-savegame-Save-ACTION_NONE-as-1"
   "backports/0074-Meson-Make-fc_server-to-depend-on-verhdr"
   "backports/0077-city_freeze_workers_queue-Set-needs_arrange-for-citi"
   "backports/0068-AI-Remove-shared-vision-from-pending-war-target-once"
