@@ -6,18 +6,9 @@
 # https://osdn.net/projects/freeciv/ticket/?????
 # https://redmine.freeciv.org/issues/???
 #
-# 0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-.patch
-#   Savegame loading fix
-#   RM #577
-# 0089-Meson-Make-fc_client_common-to-depend-on-verhdr.patch
-#   Build fix
-#   RM #596
 # 0080-savegame-Save-ACTION_NONE-as-1.patch
 #   Savegame loading fix
 #   RM #598
-# 0068-Meson-Make-libfreeciv-to-depend-on-gitrev.patch
-#   Build fix
-#   RM #597
 # 0074-Meson-Make-fc_server-to-depend-on-verhdr.patch
 #   Build fix
 #   RM #682
@@ -41,9 +32,6 @@
 # ----------------------------------
 # RevertAmplio2ExtraUnits.patch Revert freeciv-web breaking changes from amplio2 extra_units.spec
 # meson_webperimental installs webperimental ruleset
-# tutorial_ruleset changes the ruleset of the tutorial to one supported by Freeciv-web.
-#      - This should be replaced by modification of the tutorial scenario that allows it to
-#        work with multiple rulesets (Requires patch #7362 / SVN r33159)
 # webgl_vision_cheat_temporary is a temporary solution to reveal terrain types to the WebGL client.
 # longturn implements a very basic longturn mode for Freeciv-web.
 # load_command_confirmation adds a log message which confirms that loading is complete, so that Freeciv-web can issue additional commands.
@@ -59,10 +47,7 @@ declare -a GIT_PATCHLIST=(
 )
 
 declare -a PATCHLIST=(
-  "backports/0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-"
-  "backports/0089-Meson-Make-fc_client_common-to-depend-on-verhdr"
   "backports/0080-savegame-Save-ACTION_NONE-as-1"
-  "backports/0068-Meson-Make-libfreeciv-to-depend-on-gitrev"
   "backports/0074-Meson-Make-fc_server-to-depend-on-verhdr"
   "backports/0077-city_freeze_workers_queue-Set-needs_arrange-for-citi"
   "backports/0068-AI-Remove-shared-vision-from-pending-war-target-once"
@@ -75,7 +60,6 @@ declare -a PATCHLIST=(
   "text_fixes"
   "freeciv-svn-webclient-changes"
   "goto_fcweb"
-  "tutorial_ruleset"
   "savegame"
   "maphand_ch"
   "server_password"
