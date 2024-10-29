@@ -6,12 +6,6 @@
 # https://osdn.net/projects/freeciv/ticket/?????
 # https://redmine.freeciv.org/issues/???
 #
-# 0074-Meson-Make-fc_server-to-depend-on-verhdr.patch
-#   Build fix
-#   RM #682
-# 0077-city_freeze_workers_queue-Set-needs_arrange-for-citi.patch
-#   City status legality fix
-#   RM #661
 # 0068-AI-Remove-shared-vision-from-pending-war-target-once.patch
 #   AI assert fix
 #   RM #701
@@ -44,8 +38,6 @@ declare -a GIT_PATCHLIST=(
 )
 
 declare -a PATCHLIST=(
-  "backports/0074-Meson-Make-fc_server-to-depend-on-verhdr"
-  "backports/0077-city_freeze_workers_queue-Set-needs_arrange-for-citi"
   "backports/0068-AI-Remove-shared-vision-from-pending-war-target-once"
   "backports/0038-map_init_topology-Operate-on-any-map"
   "backports/0030-Tex-Initialize-map-topology"
