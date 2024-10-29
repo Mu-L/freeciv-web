@@ -2,9 +2,9 @@
 
 # Freeciv server version upgrade notes (backports)
 # ------------------------------------------------
-# osdn #????? or RM #??? is a ticket in freeciv.org tracker:
+# osdn #????? or RM #???? is a ticket in freeciv.org tracker:
 # https://osdn.net/projects/freeciv/ticket/?????
-# https://redmine.freeciv.org/issues/???
+# https://redmine.freeciv.org/issues/????
 #
 # 0068-AI-Remove-shared-vision-from-pending-war-target-once.patch
 #   AI assert fix
@@ -18,6 +18,9 @@
 # 0046-Fix-combat-veterancy-chance.patch
 #   Fix veterancy gaining
 #   RM #983
+# 0048-Make-action-selection-dialog-to-appear-on-airlift.patch
+#   Action list popup fix
+#   RM #1028
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -42,6 +45,7 @@ declare -a PATCHLIST=(
   "backports/0038-map_init_topology-Operate-on-any-map"
   "backports/0030-Tex-Initialize-map-topology"
   "backports/0046-Fix-combat-veterancy-chance"
+  "backports/0048-Make-action-selection-dialog-to-appear-on-airlift"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
