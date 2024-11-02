@@ -9,9 +9,6 @@
 # 0068-AI-Remove-shared-vision-from-pending-war-target-once.patch
 #   AI assert fix
 #   RM #701
-# 0038-map_init_topology-Operate-on-any-map.patch
-#   Dependency of 0030-Tex-Initialize-map-topology.patch
-#   RM #707
 # 0030-Tex-Initialize-map-topology.patch
 #   Tex AI map topology fix
 #   RM #663
@@ -42,7 +39,6 @@ declare -a GIT_PATCHLIST=(
 
 declare -a PATCHLIST=(
   "backports/0068-AI-Remove-shared-vision-from-pending-war-target-once"
-  "backports/0038-map_init_topology-Operate-on-any-map"
   "backports/0030-Tex-Initialize-map-topology"
   "backports/0046-Fix-combat-veterancy-chance"
   "backports/0048-Make-action-selection-dialog-to-appear-on-airlift"
