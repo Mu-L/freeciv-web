@@ -6,12 +6,6 @@
 # https://osdn.net/projects/freeciv/ticket/?????
 # https://redmine.freeciv.org/issues/????
 #
-# 0068-AI-Remove-shared-vision-from-pending-war-target-once.patch
-#   AI assert fix
-#   RM #701
-# 0030-Tex-Initialize-map-topology.patch
-#   Tex AI map topology fix
-#   RM #663
 # 0046-Fix-combat-veterancy-chance.patch
 #   Fix veterancy gaining
 #   RM #983
@@ -38,8 +32,6 @@ declare -a GIT_PATCHLIST=(
 )
 
 declare -a PATCHLIST=(
-  "backports/0068-AI-Remove-shared-vision-from-pending-war-target-once"
-  "backports/0030-Tex-Initialize-map-topology"
   "backports/0046-Fix-combat-veterancy-chance"
   "backports/0048-Make-action-selection-dialog-to-appear-on-airlift"
   "RevertAmplio2ExtraUnits"
@@ -56,6 +48,7 @@ declare -a PATCHLIST=(
   "load_command_confirmation"
   "webgl_vision_cheat_temporary"
   "endgame-mapimg"
+  "stdsounds_format"
   $(ls -1 patches/local/*.patch 2>/dev/null | sed -e 's,patches/,,' -e 's,\.patch,,' | sort)
 )
 
