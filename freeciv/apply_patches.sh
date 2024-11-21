@@ -12,6 +12,9 @@
 # 0048-Make-action-selection-dialog-to-appear-on-airlift.patch
 #   Action list popup fix
 #   RM #1028
+# 0045-unit_server_side_agent_set-Send-unit-info-only-if-ss.patch
+#   Focus unit fix
+#   RM #1104
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -34,6 +37,7 @@ declare -a GIT_PATCHLIST=(
 declare -a PATCHLIST=(
   "backports/0046-Fix-combat-veterancy-chance"
   "backports/0048-Make-action-selection-dialog-to-appear-on-airlift"
+  "backports/0045-unit_server_side_agent_set-Send-unit-info-only-if-ss"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
